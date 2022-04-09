@@ -10,7 +10,9 @@ services:
       - VERSION=docker
       - PLEX_CLAIM=${PLEX_CLAIM}
     volumes:
-      - /path/to/library:/config
-      - /path/to/tvseries:/tv
-      - /path/to/movies:/movies
+      - ${PLEX_CONFIG}:/config
+      - ${PLEX_TV}:/tv
+      - ${PLEX_MOVIES}:/movies
+      - ${PLEX_MUSIC}:/music
+      - ${PLEX_DOWNLOAD}:/download
     restart: unless-stopped
