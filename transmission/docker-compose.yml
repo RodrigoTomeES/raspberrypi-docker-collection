@@ -12,7 +12,6 @@ services:
       - TRANSMISSION_WEB_HOME=/combustion-release/ #optional
       - USER=${TRANSMISSION_USER} #optional
       - PASS=${TRANSMISSION_PASS} #optional
-      - PEERPORT=peerport #optional
       - HOST_WHITELIST=dnsnane list #optional
     volumes:
       - ${TRANSMISSION_CONFIG}:/config
